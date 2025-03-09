@@ -1,0 +1,10 @@
+export { default as ColouredLongLogo } from './coloured-long-logo.svg';
+export { default as GoogleLogo } from './google-logo.svg';
+export { default as LogoIcon } from "./logo-icon.svg";
+export { default as Logo } from "./logo.svg";
+export { default as QuickBooksLogo } from './quickbooks.svg';
+export { default as XeroLogo } from './xero.svg';
+export { default as SageLogo } from './sage.svg';
+export { default as ZohoBooksLogo } from './zoho-books.svg';
+export { default as FreshBooksLogo } from './freshbooks.svg';
+export { default as SAPBusinessOneLogo } from './sap.svg';

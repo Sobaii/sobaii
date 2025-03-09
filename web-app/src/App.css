@@ -1,0 +1,12 @@
+body {
+  background-color: #ffffff; /* Neutral background color */
+  min-height: 100vh;
+  width: fit-content;
+  min-width: 100%;
+
+  /* Grid background with thin lines */
+  background-image: 
+    linear-gradient(to right, #f1f5f9 1px, transparent 1px),
+    linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
+  background-size: 20px 20px; /* Set grid cell size */
+}

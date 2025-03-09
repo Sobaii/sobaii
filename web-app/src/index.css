@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .grid-min-max {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  line-height: 150%;
+}
+
+:root {
+  --primary-1: #eff6ff;
+  --primary-2: #bfdbfe;
+  --primary-3: #60a5fa;
+  --primary-4: #2563eb;
+  --primary-5: #1e40af;
+  --primary-6: #172554;
+  --neutral-1: #fdfdfd;
+  --neutral-2: #f1f1f1;
+  --neutral-3: #e0e0e0;
+  --neutral-4: #8e8e8e;
+  --neutral-5: #4a4a4a;
+  --neutral-6: #171717;
+  --modal-bg: rgba(0, 0, 0, 0.774);
+  --danger-1: #f87171;
+  --danger-2: #dc2626;
+  --danger-3: #991b1b;
+  --success-1: #4ade80;
+  --success-2: #16a34a;
+  --success-3: #166534;
+
+  /* box shadows */
+  --shadow-s: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-m: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-l: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  /* font sizes */
+  --font-size-xs: 0.75rem; /* 12px */
+  --line-height-xs: 1rem; /* 16px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --line-height-sm: 1.25rem; /* 20px */
+  --font-size-base: 1rem; /* 16px */
+  --line-height-base: 1.5rem; /* 24px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --line-height-lg: 1.75rem; /* 28px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --line-height-xl: 1.75rem; /* 28px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --line-height-2xl: 2rem; /* 32px */
+  --font-size-3xl: 1.75rem; /* 28px */
+  --line-height-3xl: 2.25rem; /* 36px */
+
+  /* spacings */
+  --spacing-1: 0.25rem; /* ~4px */
+  --spacing-2: 0.5rem; /* ~8px */
+  --spacing-3: 0.75rem; /* ~12px */
+  --spacing-4: 1rem; /* ~16px */
+  --spacing-5: 1.25rem; /* ~20px */
+  --spacing-6: 1.5rem; /* ~24px */
+  --spacing-7: 1.75rem; /* ~28px */
+  --spacing-8: 2rem; /* ~32px */
+  --spacing-9: 2.25rem; /* ~36px */
+  --spacing-10: 2.5rem; /* ~40px */
+  --spacing-11: 2.75rem; /* ~44px */
+  --spacing-12: 3rem; /* ~48px */
+  --spacing-13: 3.25rem; /* ~52px */
+  --spacing-14: 3.5rem; /* ~56px */
+  --spacing-15: 3.75rem; /* ~60px */
+  --spacing-17: 4.25rem; /* ~68px */
+  --spacing-18: 4.5rem; /* ~72px */
+  --spacing-19: 4.75rem; /* ~76px */
+  --spacing-20: 5rem; /* ~80px */
+
+  /* border radius */
+  --border-radius-xs: 0.125rem; /* ~2px */
+  --border-radius-sm: 0.25rem; /* ~4px */
+  --border-radius-base: 0.5rem; /* ~8px */
+  --border-radius-lg: 1rem; /* ~16px */
+  --border-radius-xl: 1.5rem; /* ~24px */
+  --border-radius-xxl: 2rem; /* ~32px */
+  --border-radius-circle: 50%; /* circle */
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-4);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+a {
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  width: fit-content;
+  font-size: var(--font-size-base);
+  color: var(--neutral-6);
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-height-3xl);
+  color: var(--neutral-6);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-2xl);
+  color: var(--neutral-6);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+  color: var(--neutral-6);
+}
+
+h4 {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+  color: var(--neutral-6);
+}
+
+h5 {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  color: var(--neutral-6);
+}
+
+h6 {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  color: var(--neutral-6);
+}
+
+p {
+  color: var(--neutral-6);
+  font-weight: 500;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+section {
+  margin: auto;
+  padding: 0 var(--spacing-8);
+  gap: var(--spacing-8);
+  max-width: 1400px;
+}
+
+.sonnerToast * {
+  font-size: var(--font-size-base);
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--neutral-3);
+  font-weight: 500;
+  font-size: var(--font-size-base);
+  resize: vertical;
+  position: relative;
+}
+
+input > img {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 20px;
+  opacity: 0.3;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.inputContainer > img {
+  position: absolute;
+  top: 50%;
+  transform: translate(12px, -50%);
+}
+
+.input.inputWithImg {
+  padding-left: 36px;
+}
+
+.input {
+  font-size: 14px;
+  border: 1px solid #d4d4d4;
+  padding: 8px 12px;
+  min-width: 320px;
+}
+
+.input:focus {
+  outline: 2px solid var(--primary-3);
+}
+
+.input.fullWidth {
+  width: 100%;
+}
+
+.input.darkMode {
+  color: white;
+  border: 1px solid #313131;
+  background-color: rgb(0, 0, 0);
+}
+
+.input.darkMode:focus {
+  color: white;
+  outline: 1px solid #313131;
+}
+
+.input.darkMode::placeholder {
+  color: #a0a0a0;
+}
+
+textarea {
+  min-height: 80px;
+  max-height: 400px;
+  padding-left: 14px;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --card-popover: 0 0% 100%;
+    --primary: 211 80% 20%;
+    --primary-foreground: 211 80% 90%;
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 211 40% 95%;
+    --muted-foreground: 211 30% 40%;
+    --accent: 211 80% 95%;
+    --accent-foreground: 211 80% 20%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 100% 95%;
+    --border: 211 80% 90%;
+    --input: 211 80% 90%;
+    --ring: 213 100% 50%;
+    --chart-1: 211 80% 61%;
+    --chart-2: 211 80% 55%;
+    --chart-3: 211 80% 50%;
+    --chart-4: 211 80% 45%;
+    --chart-5: 211 80% 40%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
